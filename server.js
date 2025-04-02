@@ -64,9 +64,9 @@ app.get("/memstats", (req, res) => {
         <table border="1">
             <tr><th></th><th>Used (MB)</th><th>Heap Total (MB)</th><th>Heap Used (MB)</th><th>External (MB)</th></tr>
             <tr><td>RSS (Resident Set Size)</td><td>${bytesToMegabytes(memoryUsage.rss)}</td>
-            <td>${bytesToMegabytes(memoryUsage.heapTotal)}</td>
-            <td>${bytesToMegabytes(memoryUsage.heapUsed)}</td>
-            <td>${bytesToMegabytes(memoryUsage.external)}</td></tr>
+            <td>Heap Total ${bytesToMegabytes(memoryUsage.heapTotal)}</td>
+            <td>Heap used ${bytesToMegabytes(memoryUsage.heapUsed)}</td>
+            <td>Memory used ${bytesToMegabytes(memoryUsage.external)}</td></tr>
         </table>
         <h2>Node.js Version</h2>
         <p>${process.version}</p>
