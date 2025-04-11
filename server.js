@@ -124,6 +124,7 @@ app.get("/memory", (req, res) => {
     } catch (err) {
         res.status(500).json({ error: "OOM simulation failed", details: err.message });
     }
+    memoryHog.length = 0;
 });
 
 // Ensure Explicit GC Can Be Triggered
